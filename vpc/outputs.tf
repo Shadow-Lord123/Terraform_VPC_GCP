@@ -17,3 +17,8 @@ output "private_vpc_connection_id" {
 output "service_networking_connection_id" {
   value = google_service_networking_connection.private_vpc_connection.id
 }
+
+output "subnetwork_self_link" {
+  description = "Self link of the VPC subnet"
+  value       = google_compute_subnetwork.this.self_link
+}
